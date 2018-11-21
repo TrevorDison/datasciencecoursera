@@ -97,6 +97,8 @@ df.all.grp <- df.all %>%
 # Remove Activity variable since it is redundant with Activity_Label
 df.all.grp <- df.all.grp[,-3]
 
-# Write final file to a tab delimited txt file in the same directory
-write_delim(df.all.grp, ".\\UCI HAR Dataset\\tidydataset.txt", delim = "\t")
+# Write final file to a text file in the same directory
+write.table(df.all.grp, ".\\UCI HAR Dataset\\tidydataset.txt", row.names = F)
 
+# Option for tab delimited file
+# write_delim(df.all.grp, ".\\UCI HAR Dataset\\tidydataset_tab.txt", delim = "\t")
