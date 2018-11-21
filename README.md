@@ -46,7 +46,8 @@ This R script should be copied into the same folder containing the 'UCI HAR Data
 ===============================================================================
 
 #### The script performs the following steps:
-1. Load the needed packages from the tidyverse package (dplyr, tidyr, stringr, tibble, readr, and purrr). NOTE: The developer's network cannot install the full tidyverse, so the R script loads the packages separately.
+1. The first step prepares the environment and loads/creates the needed data frames.
+	+ Load the needed packages from the tidyverse package (dplyr, tidyr, stringr, tibble, readr, and purrr). NOTE: The developer's network cannot install the full tidyverse, so the R script loads the packages separately.
 	+ Clear the current working environment of existing objects.
 	+ For each data set (test and train):
 		+ Load the data file (X_test or X-train) into a data frame.
