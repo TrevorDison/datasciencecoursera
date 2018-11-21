@@ -59,24 +59,7 @@ This R script should be copied into the same folder containing the 'UCI HAR Data
 4. Next, the variable names are modified to make them more readable. For each variable, modifications include: deleting the numbers at the beginning, deleting the parentheses, replacing dashes with underscores, replacing 'mean' with 'Mean' and 'std' with 'StdDev', replacing the first letter 't' with 'Time_' and 'f' with 'Fourier_'. 
 	+ Example: '1 tBodyAcc-mean()-X' becomes 'Time_BodyAcc_Mean_X'
 	+ This provides a clearer description of each variable without becoming too lengthy.
+5. The final step in the code is to group the data by 'Subject' and 'Activity_Label', then summarize the data using the mean of each variable. The end result is a data	frame containing a single row for each subject by activity (6 activities for each of the 30 subjects = 180 rows). The 'Activity' field is removed since the data now contains the 'Activity_Label' and would be redundant. A tab delimited text file is then created in the 'UCI HAR Dataset' folder containing the tidy data set. This file is named 'tidydataset.txt'.
 
-
-
-5.  The final step in the code is to group the data by 'Subject' and 'Activity_Label', 
-
-	then summarize the data using the mean of each variable. The end result is a data
-
-	frame containing a single row for each subject by activity (6 activities for each 
-
-	of the 30 subjects = 180 rows). The 'Activity' field is removed since the data now
-
-	contains the 'Activity_Label' and would be redundant.
-
-    A tab delimited text file is then created in the 'UCI HAR Dataset' folder containing 
-
-	the tidy data set. This file is named 'tidydataset.txt'.
-
-==========================================================================================	
-
-==========================================================================================
+===============================================================================	
 
