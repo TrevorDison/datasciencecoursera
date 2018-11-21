@@ -53,7 +53,6 @@ This R script should be copied into the same folder containing the 'UCI HAR Data
 		+ Add column names to the data frame from the features.txt file.
 		+ Merge the data frame with its subject and activity tables to create a complete data frame with each observation containing the subject number, the activity number, and a vector of 561 features.
 	+ Merge the test and train data sets into a single data frame.
-
 2. Limit the data frame to only the first two fields (Subject and Activity) and any field that contains the text 'mean' or 'std'. This results in a data frame with 82 variables and 10299 observations.
 3. The next step creates a new field to describe the activity. This is done using a left_join between the data frame and the activity labels file. The result of this step is an expanded data frame that also includes the label for each observation's activity code. This field is named 'Activity_Label'.
 4. Next, the variable names are modified to make them more readable. For each variable, modifications include: deleting the numbers at the beginning, deleting the parentheses, replacing dashes with underscores, replacing 'mean' with 'Mean' and 'std' with 'StdDev', replacing the first letter 't' with 'Time_' and 'f' with 'Fourier_'. 
