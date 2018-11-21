@@ -41,22 +41,18 @@ The instructions provided were:
 > 5.  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 The R script named 'run_analysis.R' contains the code required to create the tidy data set.
-
 This R script should be copied into the same folder containing the 'UCI HAR Dataset' folder.
-
 
 ===============================================================================
 
 #### The script performs the following steps:
-
 1. Load the needed packages from the tidyverse package (dplyr, tidyr, stringr, tibble, readr, and purrr). NOTE: The developer's network cannot install the full tidyverse, so the R script loads the packages separately.
-
-Clear the current working environment of existing objects.
-For each data set (test and train):
-Load the data file (X_test or X-train) into a data frame.
-Add column names to the data frame from the features.txt file.
-Merge the data frame with its subject and activity tables to create a complete data frame with each observation containing the subject number, the activity number, and a vector of 561 features.
-Merge the test and train data sets into a single data frame.
+	+ Clear the current working environment of existing objects.
+	+ For each data set (test and train):
+		+ Load the data file (X_test or X-train) into a data frame.
+		+ Add column names to the data frame from the features.txt file.
+		+ Merge the data frame with its subject and activity tables to create a complete data frame with each observation containing the subject number, the activity number, and a vector of 561 features.
+	+ Merge the test and train data sets into a single data frame.
 
 2. Limit the data frame to only the first two fields (Subject and Activity) and any field
 
